@@ -74,3 +74,19 @@ for candidates, vote in candidate_votes.items():
     print(f"{candidates}: {percentage:.3f}% ({vote})")
 print("-------------------------")
 print(f"The winner is: {winner}")
+
+# # Export to a text file
+with open("pypollresults.txt", "w") as file:
+    file.write("Election Results")
+    file.write("-------------------------")
+    file.write(f'Total Votes: {total_votes}')
+    file.write("-------------------------")
+    file.write 
+    for candidates, vote in candidate_votes.items():
+        percentage = (vote / total_votes) * 100
+        file.write(f"{candidates}: {percentage:.3f}% ({vote})")
+    file.write("-------------------------")
+    file.write(f"The winner is: {winner}")
+    file.write("-------------------------")
+print("Results exported to pypollresults.txt")
+
